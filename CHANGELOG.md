@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Pragmatic Versioning](https://pragver.github.io/spec/1.0.0.0.html).
 
 
+## [Unreleased]
+
+No unreleased changes.
+
+
 ## [0.1.0.0]
 
 ### Added
@@ -14,4 +19,5 @@ and this project adheres to [Pragmatic Versioning](https://pragver.github.io/spe
 - Class `com.leakyabstractions.result.jackson3.ResultModule`.
 
 
+[Unreleased]: https://github.com/LeakyAbstractions/result-jackson3/compare/main...develop
 [0.1.0.0]: https://github.com/LeakyAbstractions/result-jackson3/releases/tag/0.1.0.0
