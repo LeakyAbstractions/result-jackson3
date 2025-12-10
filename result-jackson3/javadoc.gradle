@@ -1,0 +1,12 @@
+// Configure Javadoc
+javadoc {
+    options {
+        title = project.artifactName
+        header "${project.artifactName} ${rootProject.version}"
+        author true
+        links 'https://docs.oracle.com/javase/8/docs/api/'
+        links 'https://javadoc.io/doc/com.leakyabstractions/result-api/latest/'
+        links 'https://javadoc.io/doc/tools.jackson.core/jackson-core/latest/'
+        links 'https://javadoc.io/doc/tools.jackson.core/jackson-databind/latest/'
+    }
+}
