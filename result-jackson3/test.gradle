@@ -1,0 +1,13 @@
+
+// Configure test suite
+testing {
+    suites {
+        test {
+            useJUnitJupiter(libs.versions.junit)
+            dependencies {
+                runtimeOnly.bundle(libs.bundles.test.runtime)
+                implementation.bundle(libs.bundles.test.implementation)
+            }
+        }
+    }
+}
