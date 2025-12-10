@@ -9,7 +9,9 @@ and this project adheres to [Pragmatic Versioning](https://pragver.github.io/spe
 
 ## [Unreleased]
 
-No unreleased changes.
+### Added
+
+- Class `com.leakyabstractions.result.jackson3.ResultModule`.
 
 
 [Unreleased]: https://github.com/LeakyAbstractions/result-jackson3/compare/main...develop
