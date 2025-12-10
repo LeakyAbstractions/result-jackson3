@@ -1,0 +1,43 @@
+
+plugins {
+    id 'me.champeau.gradle.japicmp'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    current
+    previous
+}
+
+dependencies {
+    current project(":${artifactId}")
+    previous project.ext.previousVersion == project.version ? project(":${artifactId}") : "${group}:${artifactId}:${previousVersion}"
+}
+
+tasks.register("clean", Delete) {
+    delete layout.buildDirectory
+}
+
+tasks.register("check", me.champeau.gradle.japicmp.JapicmpTask) {
+    final semverReport= layout.buildDirectory.file('semver.txt').get().asFile
+    final textReport  = layout.buildDirectory.file('report.txt').get().asFile
+    final htmlReport  = layout.buildDirectory.file('report.html').get().asFile
+    final mdReport    = layout.buildDirectory.file('report.md').get().asFile
+    addNewArchives(configurations.current)
+    addOldArchives(configurations.previous)
+    packageExcludes             = [ 'tools.jackson.core.internal.*' ]
+    semverOutputFile            = semverReport
+    txtOutputFile               = textReport
+    htmlOutputFile              = htmlReport
+    mdOutputFile                = mdReport
+    ignoreMissingClasses        = true
+    onlyModified                = true
+    failOnModification          = false
+    failOnSourceIncompatibility = false
+    doLast {
+        logger.quiet(textReport.text)
+    }
+}

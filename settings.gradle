@@ -5,3 +5,4 @@ plugins {
 
 rootProject.name = 'result-jackson3-root'
 include('result-jackson3')
+include('api-compatibility')
