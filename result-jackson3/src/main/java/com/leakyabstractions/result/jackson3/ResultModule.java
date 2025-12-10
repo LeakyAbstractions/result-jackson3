@@ -33,7 +33,7 @@ public class ResultModule extends SimpleModule {
     private static final String ARTIFACT_ID = "result-jackson3";
 
     private static final int[] VERSION_NUMBERS = { 0, 1, 0, 0 };
-    private static final String VERSION_SNAPSHOT = "SNAPSHOT";
+    private static final String VERSION_SNAPSHOT = null;
 
     private static final int VERSION_GRADE = VERSION_NUMBERS[0];
     private static final int VERSION_MAJOR = VERSION_NUMBERS[1];
