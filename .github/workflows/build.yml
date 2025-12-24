@@ -97,11 +97,19 @@ jobs:
       run: ./gradlew check
 
     # ================================
+    # COMPATIBILITY REPORT
+    # ================================
+    - name: Compatibility with previous version
+      if: ${{ env.is_latest_jdk }}
+      # $GITHUB_STEP_SUMMARY supports content up to a size of 1024k
+      run: head -c 1MiB ./api-compatibility/build/report.md >> $GITHUB_STEP_SUMMARY
+
+    # ================================
     # CACHE SONARCLOUD PACKAGES
     # ================================
     - name: Cache SonarCloud packages
       if: ${{ env.is_latest_jdk && !env.is_fork }}
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         key: ${{ runner.os }}-sonar
         path: |
