@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
 
-  "schedule": ["every day before 5am"],
+  "schedule": ["* 0-4 * * *"],
 
   "baseBranches": ["develop"],
 
