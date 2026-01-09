@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 Guillermo Calvo
+ * Copyright 2026 Guillermo Calvo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@ public class ResultModule extends SimpleModule {
     private static final String GROUP_ID = "com.leakyabstractions";
     private static final String ARTIFACT_ID = "result-jackson3";
 
-    private static final int[] VERSION_NUMBERS = { 1, 0, 0, 0 };
-    private static final String VERSION_SNAPSHOT = null;
+    private static final int[] VERSION_NUMBERS = { 1, 0, 0, 1 };
+    private static final String VERSION_SNAPSHOT = "SNAPSHOT";
 
     private static final int VERSION_GRADE = VERSION_NUMBERS[0];
     private static final int VERSION_MAJOR = VERSION_NUMBERS[1];
