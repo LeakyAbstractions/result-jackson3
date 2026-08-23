@@ -12,6 +12,7 @@ and this project adheres to [Pragmatic Versioning](https://pragver.github.io/spe
 ### Changed
 
 - Switch **jackson-databind** from `implementation` to `compileOnly`.
+- Bump **jackson-databind** from 3.0.3 to 3.2.2.
 
 
 ## [1.0.1.0]
